@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💗 Un correo para ti by Angelita 💗</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@1,100..900&display=swap');
+  </style>
+ <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+      color: #333;
+      transition: background-color 0.5s ease;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .screen {
+      display: none;
+      animation: fadeIn 0.8s ease;
+      width: 90%;
+      max-width: 600px;
+      margin: 50px auto 0px auto;
+    }
+    .active {
+      display: block;
+    }
+    .main-img {
+      width: 280px;
+      height: auto;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border: none;
+      box-shadow: none;
+    }
+    .main-img:hover {
+      transform: scale(1.05);
+    }
+    .card {
+      background: repeating-linear-gradient(
+        white,
+        white 28px,
+        #e3e3e3 29px
+      );
+      border-radius: 0; /* esquinas en punta */
+      padding: 40px 60px;
+      border: 2px solid #e5e5e5;
+      width: 95%;
+      max-width: 900px;
+      text-align: left;
+      margin: 0 auto;
+      box-sizing: border-box;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+    .card h3 {
+      font-family: 'Sour Gummy';
+      font-size: 1.5em;
+      text-align: left;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      color: #444;
+    }
+    .card p {
+      font-family: 'Sour Gummy';
+      font-size: 1em;
+      line-height: 1.6;
+      text-align: justify;
+      color: #444;
+      margin: 10px 0;
+    }
+    .return-btn {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: #ff4f81;
+      color: white;
+    }
+    .return-btn:hover {
+      background-color: #ff2a66;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+    @media (max-width: 600px) {
+  .screen {
+    margin: 25px auto;
+  }
+
+  .card {
+    padding: 30px 25px;
+  }
+}
+/* Centrar contenido de las primeras 4 pantallas */
+#screen1 .content,
+#screen2 .content,
+#screen3 .content,
+#screen4 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* ajusta si es necesario */
+}
+  </style>
+</head>
+<body>
+  <div class="screen active" id="screen1">
+    <div class="content">
+    <h2>Hola amor, te llegó un correo</h2>
+    <img src="https://i.pinimg.com/736x/8e/a6/05/8ea6056c30526a79aa800bbbce276645.jpg" alt="Correo" class="main-img" onclick="nextScreen(2)">
+  </div>
+</div>
+  <div class="screen" id="screen2">
+    <div class="content">
+    <h2>Una cartita para ti</h2>
+    <img src="https://i.pinimg.com/736x/08/8a/d8/088ad89bd98763783954b4aa5b957f89.jpg?fbclid=IwY2xjawP8wfFleHRuA2FlbQIxMABicmlkETFEbXhCTWVKajI3TklubDc4c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHtsn8PqZyi44GkDwGX-DHCjDeK3tY0dEME8KcE_a4AhgfrJfPzau0Cq_PBmH_aem_uGbagTmvMknQOhopaQ24aQ" alt="Carta" class="main-img" onclick="nextScreen(3)">
+  </div>
+</div>
+  <div class="screen" id="screen3">
+    <div class="content">
+    <h2>¡Ábrelo! uwu</h2>
+    <img src="https://i.pinimg.com/736x/0b/97/89/0b978918f0efa0174a6e72d67f2c442a.jpg?fbclid=IwY2xjawP8wfVleHRuA2FlbQIxMABicmlkETFEbXhCTWVKajI3TklubDc4c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjq1S_uNHHELUebDbaOB5dCRYy97gtAkT0z-Z5V1KVD7XnRX3WgT214DBUeM_aem_YdTGc_UUUUgu70ncEfhWKg" alt="Sobre" class="main-img" onclick="nextScreen(4)">
+  </div>
+</div>
+  <div class="screen" id="screen4">
+    <div class="content">
+    <h2>¿Qué dirá? 🙀</h2>
+    <img src="https://i.pinimg.com/736x/39/bb/76/39bb76ae806e83e7c317a3697669dade.jpg" alt="Carta lista" class="main-img" onclick="nextScreen(5)">
+  </div>
+</div>
+  <div class="screen" id="screen5">
+    <div class="card">
+      <h3>Querido Rodrigo,</h3>
+      <p>¡Feliz primer 14 de febrero, mi vida! 😭💞</p>
+      <p>Me siento muy contenta de que estemos juntos en esta fecha tan importante. A decir verdad,
+        me pone un poco triste no estar contigo físicamente, pues me hacía ilusión. Sin embargo, 
+        lejos de mí no estás, porque siempre estás presente en mi corazón y en cada pensamiento.
+        Además, ya cuando estés de vuelta en Perú organizaremos una salida bonita, claro que sí.</p>
+      <p>Mi amorcito, ¿sabes lo mucho que me encantas? Adoro la manera en que me hablas, como me 
+        haces reír y animas incluso cuando no tengo ganas, la tranquilidad que me das en mis momentos
+        difíciles. O las veces que actuas como un niño chiquito y haces de las tuyas, cuando
+        demuestras lo mucho que quieres a tu familia y, me encantas un poco más cuando tenemos
+        malentendidos por falta de comunicación y terminamos molestándonos el uno con el otro. Y es
+        que cómo explicar que simplemente me encantas porque eres tú, a pesar de cuales sean las
+        circunstancias.</p>
+      <p>Rodriguito de mi corazón de melón, eres de lo mejor que me ha pasado y siempre estaré
+        agradecida contigo por todo. Eres alguien especial para mí, pues no solo eres mi enamorado,
+        eres: mi mejor amigo, mi twin, mi bestie, mi príncipe azul, mi media naranja, el Tung Tung
+        Tung Sahur de mi Ballerina Capuchina y, por supuesto, el hombre con quien espero casarme
+        algun día y tener una linda familia. Probablemente me esté adelantando mucho a los hechos,
+        pero te amo tanto que es inevitable no imaginarmelo.</p>
+      <p>Espero con ansias que este sea el primer San Valentín de muchos más, sé que si trabajamos
+        juntos en ello lo lograremos. Y nada, sigue pasándola bomba allá en USA, diviértete mucho y
+        relájate todo lo que puedas, porque te lo mereces. Te valoro mucho mi niño precioso, en mis
+        ojos eres y serás el más guapo, inteligente y fuerte de todos, nunca dudes de eso. Te amo
+        millones 😿.</p>
+      <p>Con todo el cariño de mi corazón 💌,</p>
+      <p>- Angela, tu eterna enamorada ♡</p>
+    </div>
+    <div style="text-align: center;">
+      <button class="return-btn" onclick="nextScreen(1)">¡Regresar! 🔙</button>
+    </div>
+  </div>
+  <script>
+    function nextScreen(num) {
+      const current = document.querySelector(".screen.active");
+      if (current) current.classList.remove("active");
+      document.getElementById("screen" + num).classList.add("active");
+    }
+  </script>
+</body>
+</html>
